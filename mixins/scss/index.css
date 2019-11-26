@@ -1,14 +1,15 @@
 #header {
+  margin: 0 auto 0 auto;
   width: 960px;
-  background: #222;
 }
 
 #container {
+  margin: 20px auto 0 auto;
   width: 960px;
 }
 
 #footer {
+  margin: 50px auto 10px auto;
   width: 960px;
-  background: #222;
 }
 /*# sourceMappingURL=index.css.map */

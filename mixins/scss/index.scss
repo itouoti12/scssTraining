@@ -1,0 +1,23 @@
+@charset "utf-8";
+  
+$MAX_CONTENT_WIDTH       : 960px;
+ 
+@mixin center-layout($margin_top: 0, $margin_bottom: 0) {
+        margin   : $margin_top auto $margin_bottom auto; //引数を上下に指定
+        width    : $MAX_CONTENT_WIDTH; //変数を指定
+}
+ 
+#header
+{
+        @include center-layout(); //引数なしでデフォルト値を指定
+}
+  
+#container
+{
+        @include center-layout( 20px ); //上マージンのみ引数に指定
+}
+  
+#footer
+{
+        @include center-layout( 50px, 10px ); //上下マージンを引数に指定
+}

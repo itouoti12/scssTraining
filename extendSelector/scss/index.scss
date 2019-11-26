@@ -1,0 +1,42 @@
+@charset "utf-8";
+  
+.list
+{
+        margin     : 20px 0 0 0;
+ 
+        .item
+        {
+                list-style      : none;
+                font-size       : 100%;
+        }
+}
+ 
+.floatList
+{
+        @extend .list;
+ 
+        .item
+        {
+                width           : 300px;
+                float           : left;
+ 
+                font-size       : 90%;
+        }
+}
+ 
+.glidList
+{
+        @extend .list;
+ 
+        .item
+        {
+                overflow        : hidden;
+                width           : 150px;
+                height          : 150px;
+                float           : left;
+                 
+                border          : 1px solid #55e;
+ 
+                font-size       : 90%;
+        }
+}

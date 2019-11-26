@@ -1,0 +1,24 @@
+.list, .floatList, .glidList {
+  margin: 20px 0 0 0;
+}
+
+.list .item, .floatList .item, .glidList .item {
+  list-style: none;
+  font-size: 100%;
+}
+
+.floatList .item {
+  width: 300px;
+  float: left;
+  font-size: 90%;
+}
+
+.glidList .item {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  float: left;
+  border: 1px solid #55e;
+  font-size: 90%;
+}
+/*# sourceMappingURL=index.css.map */
