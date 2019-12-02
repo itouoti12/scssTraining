@@ -1,0 +1,360 @@
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap p {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.wrap p:first-child {
+  margin-top: 0;
+}
+
+.wrap a {
+  max-width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 10px 40px;
+  text-decoration: none;
+}
+
+.wrap span {
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  letter-spacing: 0.075em;
+  -webkit-font-smoothing: auto;
+}
+
+.default a {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #80ba41;
+  border: 1px solid #80ba41;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.default a::before, .default a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 50%;
+  z-index: 0;
+  background: #80ba41;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.default a::after {
+  top: auto;
+  bottom: 50%;
+}
+
+.default a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #80ba41;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  z-index: 1;
+}
+
+.default a span::before, .default a span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  height: 1px;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.default a span::before {
+  width: 100%;
+  opacity: 0;
+  background: #FFF;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.default a span::after {
+  width: 5%;
+  background: #80ba41;
+}
+
+.default a:hover::before, .default a:hover::after {
+  height: 51%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.default a:hover span {
+  color: #fff;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.default a:hover span::before {
+  opacity: 1;
+  background: #fff;
+  width: 5%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.default a:hover span::after {
+  background: #fff;
+  -webkit-transform: translateX(350%);
+          transform: translateX(350%);
+}
+
+.blue a {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #42b0ea;
+  border: 1px solid #42b0ea;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.blue a::before, .blue a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 50%;
+  z-index: 0;
+  background: #42b0ea;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.blue a::after {
+  top: auto;
+  bottom: 50%;
+}
+
+.blue a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #42b0ea;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  z-index: 1;
+}
+
+.blue a span::before, .blue a span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  height: 1px;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.blue a span::before {
+  width: 100%;
+  opacity: 0;
+  background: #FFF;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.blue a span::after {
+  width: 5%;
+  background: #42b0ea;
+}
+
+.blue a:hover::before, .blue a:hover::after {
+  height: 51%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.blue a:hover span {
+  color: #fff;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.blue a:hover span::before {
+  opacity: 1;
+  background: #fff;
+  width: 5%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.blue a:hover span::after {
+  background: #fff;
+  -webkit-transform: translateX(350%);
+          transform: translateX(350%);
+}
+
+.pink_gray a {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #ff6bce;
+  border: 1px solid #eee;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pink_gray a::before, .pink_gray a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 50%;
+  z-index: 0;
+  background: #eee;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.pink_gray a::after {
+  top: auto;
+  bottom: 50%;
+}
+
+.pink_gray a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #ff6bce;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  z-index: 1;
+}
+
+.pink_gray a span::before, .pink_gray a span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  height: 1px;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.pink_gray a span::before {
+  width: 100%;
+  opacity: 0;
+  background: #FFF;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.pink_gray a span::after {
+  width: 5%;
+  background: #ff6bce;
+}
+
+.pink_gray a:hover::before, .pink_gray a:hover::after {
+  height: 51%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.pink_gray a:hover span {
+  color: #3f51b5;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.pink_gray a:hover span::before {
+  opacity: 1;
+  background: #bbb;
+  width: 5%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.pink_gray a:hover span::after {
+  background: #bbb;
+  -webkit-transform: translateX(350%);
+          transform: translateX(350%);
+}
+/*# sourceMappingURL=index.css.map */

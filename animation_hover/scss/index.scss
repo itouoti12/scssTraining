@@ -1,0 +1,90 @@
+// link-line-trans Mixin
+@mixin link-line-trans($opacity: 0.75, $borderColor: #80ba41, $afterTextColor: #333) {
+    a{
+      line-height: 1.6;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.20,1,.20,1);
+      &::before,
+      &::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        content: "";
+        background: $borderColor;
+        transform: translateX(-105%);
+        transition: all 0.3s cubic-bezier(0.20,1,.20,1);
+      }
+      &:hover{
+        color: $afterTextColor;
+        opacity: $opacity;
+        &::before{
+          transform: translateX(0);
+          transition-delay: 0.2s;
+        }
+        &::after{
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+  
+  // Customized settings
+  .wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    div{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+  
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+    a{
+      color: #333;
+      line-height: 1.6;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 100;
+      font-size: 26px;
+      font-style: italic;
+      letter-spacing: 0.075em;
+      margin: 10px 40px;
+      text-decoration: none;
+    }
+  }
+  
+  // Set mixin
+  .default{
+    @include link-line-trans();
+  }
+  .blue_yellow{
+    @include link-line-trans(1, #ffc107, #00a7ff);
+  }
+  .bg_black1{
+    @include link-line-trans(1, #ff30e1, #f6ff00);
+    background: #000;
+  
+    a{
+      color: #fff;
+    }
+  }
+  .bg_black2{
+    @include link-line-trans(1, #888, #aaa);
+    background: #000;
+  
+    a{
+      color: #fff;
+    }
+  }

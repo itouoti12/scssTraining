@@ -1,0 +1,111 @@
+
+$POSIITON       : relative;
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        width: 100px;
+        font-size: small;
+        position: $POSIITON;
+        left: 0px;
+    }
+    100% {
+        opacity: 1;
+        width: 300px;
+        font-size: large;
+        position: $POSIITON;
+        left: 150px;
+    }
+}
+
+.animation {
+    // 1.アニメーションの指定
+    animation-name: fadeIn;
+    // 2.何秒間実行
+    animation-duration: 5s;
+    // 3.アニメーションの変化の度合い
+    animation-timing-function: ease-in-out;
+    // 4.何秒後に実行
+    animation-delay: 2s;
+    // 5.アニメーション実行回数
+    animation-iteration-count: 2;
+    // 6.アニメーションの再生方向
+    animation-direction: alternate-reverse;
+    // 7.アニメーションの開始前、終了後のスタイルを指定
+    animation-fill-mode: forwards;
+    // 8.アニメーションの再生・停止を指定
+    animation-play-state: running;
+
+    
+    // 9.今までのプロパティを一括で指定できるショートハンドプロパティ
+    /**
+    animation: fadeIn 5s ease-in-out 2s 2 alternate-reverse forwards running;
+    **/
+
+    //最低限アニメーションを動かすのに必要なのは、
+    //animation-name animation-duration
+}
+
+.transform {
+    width:80px;
+    height:80px;
+    background:rgba(18,132,129,0.8);
+    transition-duration: 1s;
+
+}
+
+//カーソル（マウスポインタ―）で要素の上をホバー（通過）させたとき
+.transform:hover {
+    // translate 移動 単位はpx
+    // rotate 回転 単位はdeg
+    // scale 縮尺 単位は何倍か
+    // skew 傾斜 単位はdeg
+    transform: translateZ(100px) translate(50px,50px) rotate(180deg) scale(2,2) skew(20deg, 20deg);
+}
+
+.transition {
+    width: 60px;
+    height: 50px;
+    background-color: brown;
+    // 変化を適用するプロパティを指定できる
+    transition-property: background-color,height;
+    // 変化が始まって終わるまでの時間を指定
+    transition-duration: 3s;
+    // 変化の度合いを指定 
+    transition-timing-function: ease-out;
+    // 変化が始まる時間を指定
+    transition-delay: 3s;
+
+    // プロパティをまとめて指定できるショートハンドプロパティ
+    // transition: width 3s ease-out 3s;
+    // 複数プロパティを別々で指定する時はカンマ区切り
+    // transition: width 3s ease-out 3s, height 1s ease-in 2s;
+}
+
+.transition:hover{
+    width: 100px;
+    height: 10px;
+    background-color:greenyellow;
+}
+
+// ブラウザサポートによって、接頭辞が必要
+/* Firefox 4 */
+// @-moz-keyframes
+// -moz-transition-property:width;
+// -moz-transition-duration:1s;
+// -moz-transition-timing-function:linear;
+// -moz-transition-delay:2s;
+/* Safari and Chrome */
+// @-webkit-keyframes
+// -webkit-transition-property:width;
+// -webkit-transition-duration:1s;
+// -webkit-transition-timing-function:linear;
+// -webkit-transition-delay:2s;
+/* Opera */
+// @-o-keyframes
+// -o-transition-property:width;
+// -o-transition-duration:1s;
+// -o-transition-timing-function:linear;
+// -o-transition-delay:2s;
+
+
